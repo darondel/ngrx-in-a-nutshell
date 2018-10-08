@@ -5,13 +5,13 @@
   <mat-grid-tile [colspan]="3">
     <app-todo-form></app-todo-form>
   </mat-grid-tile>
-  <mat-grid-tile>
+  <mat-grid-tile [colspan]="bottomCols | async">
     <app-todo-list [completed]="false"></app-todo-list>
   </mat-grid-tile>
-  <mat-grid-tile>
+  <mat-grid-tile [colspan]="bottomCols | async">
     <app-todo-state></app-todo-state>
   </mat-grid-tile>
-  <mat-grid-tile>
+  <mat-grid-tile [colspan]="bottomCols | async">
     <app-todo-list [completed]="true"></app-todo-list>
   </mat-grid-tile>
 </mat-grid-list>
