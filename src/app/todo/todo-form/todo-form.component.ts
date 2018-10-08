@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 import { Store } from '@ngrx/store';
 
@@ -20,13 +20,17 @@ export class TodoFormComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.formBuilder.group({
-      content: ['', Validators.required]
+      content: ''
     });
   }
 
   onSubmit() {
-    this.store.dispatch(new AddOne(this.form.value.content));
-    this.form.reset();
+    const content = this.form.value.content;
+
+    if (content) {
+      this.store.dispatch(new AddOne(content));
+      this.form.reset();
+    }
   }
 
 }
