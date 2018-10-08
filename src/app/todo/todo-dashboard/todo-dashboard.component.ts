@@ -18,7 +18,7 @@ export class TodoDashboardComponent implements OnInit {
 
   ngOnInit() {
     this.bottomCols = this.breakpointObserver.observe(Breakpoints.HandsetPortrait).pipe(
-      map(({matches}) => matches ? 3 : 1)
+      map(({matches}) => matches ? 1 : 3)
     );
   }
 

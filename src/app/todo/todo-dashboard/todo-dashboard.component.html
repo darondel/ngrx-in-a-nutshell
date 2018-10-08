@@ -1,17 +1,23 @@
-<mat-grid-list [cols]="3" rowHeight="fit">
-  <mat-grid-tile [colspan]="3">
-    <app-todo-counter></app-todo-counter>
-  </mat-grid-tile>
-  <mat-grid-tile [colspan]="3">
-    <app-todo-form></app-todo-form>
-  </mat-grid-tile>
-  <mat-grid-tile [colspan]="bottomCols | async">
-    <app-todo-list [completed]="false"></app-todo-list>
-  </mat-grid-tile>
-  <mat-grid-tile [colspan]="bottomCols | async">
-    <app-todo-state></app-todo-state>
-  </mat-grid-tile>
-  <mat-grid-tile [colspan]="bottomCols | async">
-    <app-todo-list [completed]="true"></app-todo-list>
-  </mat-grid-tile>
-</mat-grid-list>
+<div class="grid-container">
+  <mat-grid-list [cols]="1" rowHeight="fit">
+    <mat-grid-tile>
+      <app-todo-counter></app-todo-counter>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list [cols]="1" rowHeight="fit">
+    <mat-grid-tile>
+      <app-todo-form></app-todo-form>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list [cols]="bottomCols | async" rowHeight="fit">
+    <mat-grid-tile>
+      <app-todo-list [completed]="false"></app-todo-list>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-todo-state></app-todo-state>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-todo-list [completed]="true"></app-todo-list>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
