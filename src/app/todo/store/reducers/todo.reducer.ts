@@ -17,7 +17,7 @@ export function todoReducer(state = initialState, action: TodoAction): TodoState
   switch (action.type) {
     case TodoActionType.ADD_ONE:
       return todoAdapter.addOne({
-        id: Math.random(),
+        id: '_' + Math.random().toString(36).substr(2, 9),
         content: action.content,
         completed: false
       }, state);

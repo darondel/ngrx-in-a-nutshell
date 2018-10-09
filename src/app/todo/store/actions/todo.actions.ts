@@ -16,14 +16,14 @@ export class AddOne implements Action {
 export class CompleteOne implements Action {
   readonly type = TodoActionType.COMPLETE_ONE;
 
-  constructor(public id: number) {
+  constructor(public id: string) {
   }
 }
 
 export class ActivateOne implements Action {
   readonly type = TodoActionType.ACTIVATE_ONE;
 
-  constructor(public id: number) {
+  constructor(public id: string) {
   }
 }
 

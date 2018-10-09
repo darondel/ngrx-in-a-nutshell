@@ -29,7 +29,7 @@ export class TodoListComponent implements OnInit {
     );
   }
 
-  onSelect(id: number) {
+  onSelect(id: string) {
     this.store.dispatch(this.completed ? new ActivateOne(id) : new CompleteOne(id));
   }
 
