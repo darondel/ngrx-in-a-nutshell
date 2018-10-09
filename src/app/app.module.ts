@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
-import { TodoModule } from './todo/todo.module';
+import { CoreModule } from './core/core.module';
 
 import { AppComponent } from './app.component';
 import { reducers } from './app.reducer';
@@ -22,7 +22,7 @@ import { environment } from '../environments/environment';
     StoreDevtoolsModule.instrument({
       logOnly: environment.production
     }),
-    TodoModule
+    CoreModule
   ],
   bootstrap: [
     AppComponent
