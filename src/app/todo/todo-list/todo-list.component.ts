@@ -11,7 +11,7 @@ import { AppState, getAllTodos } from '../../app.reducer';
 @Component({
   selector: 'app-todo-list',
   templateUrl: './todo-list.component.html',
-  styleUrls: ['./todo-list.component.css']
+  styleUrls: ['./todo-list.component.css', '../../shared/scrollable-mat-card.css']
 })
 export class TodoListComponent implements OnInit {
 

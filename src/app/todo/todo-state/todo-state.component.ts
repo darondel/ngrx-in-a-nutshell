@@ -10,7 +10,7 @@ import { AppState, getTodoState } from '../../app.reducer';
 @Component({
   selector: 'app-todo-state',
   templateUrl: './todo-state.component.html',
-  styleUrls: ['./todo-state.component.css']
+  styleUrls: ['./todo-state.component.css', '../../shared/scrollable-mat-card.css']
 })
 export class TodoStateComponent implements OnInit {
 

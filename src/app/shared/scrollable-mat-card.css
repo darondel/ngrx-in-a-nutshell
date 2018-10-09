@@ -1,0 +1,13 @@
+mat-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+mat-card-header {
+  display: block;
+}
+
+mat-card-content {
+  overflow-y: auto;
+}
