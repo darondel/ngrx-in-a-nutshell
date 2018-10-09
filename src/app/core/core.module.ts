@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
+import { MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, MatToolbarModule, MatTooltipModule } from '@angular/material';
 
 import { CoreRoutingModule } from './core-routing.module';
 import { TodoModule } from '../todo/todo.module';
@@ -17,6 +17,7 @@ import { NavComponent } from './nav/nav.component';
     MatIconModule,
     MatListModule,
     MatToolbarModule,
+    MatTooltipModule,
     MatSidenavModule,
     TodoModule
   ],
