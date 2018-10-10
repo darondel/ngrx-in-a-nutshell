@@ -1,6 +1,7 @@
 <mat-sidenav-container>
   <mat-sidenav
     #drawer
+    class="mat-elevation-z6"
     [fixedInViewport]="true"
     [attr.role]="(isHandset | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset | async) ? 'over' : 'side'"
