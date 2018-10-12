@@ -3,39 +3,19 @@
 </mat-toolbar>
 
 <mat-accordion>
-  <mat-expansion-panel [expanded]="true">
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Motivation
-      </mat-panel-title>
-    </mat-expansion-panel-header>
+  <app-redux-section [section]="ReduxSection.MOTIVATION">
     <img src="https://cdn-images-1.medium.com/max/1600/1*87dJ5EB3ydD7_AbhKb4UOQ.png" alt="Motivation">
-  </mat-expansion-panel>
+  </app-redux-section>
 
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Architecture
-      </mat-panel-title>
-    </mat-expansion-panel-header>
+  <app-redux-section [section]="ReduxSection.ARCHITECTURE">
     <img src="https://pbs.twimg.com/media/CsvqVeIXEAAeCSX.png" alt="Architecture">
-  </mat-expansion-panel>
+  </app-redux-section>
 
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Three Key Principles
-      </mat-panel-title>
-    </mat-expansion-panel-header>
+  <app-redux-section [section]="ReduxSection.PRINCIPLES">
     <app-redux-principles></app-redux-principles>
-  </mat-expansion-panel>
+  </app-redux-section>
 
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Implementations
-      </mat-panel-title>
-    </mat-expansion-panel-header>
+  <app-redux-section [section]="ReduxSection.IMPLEMENTATIONS">
     <app-redux-implementations></app-redux-implementations>
-  </mat-expansion-panel>
+  </app-redux-section>
 </mat-accordion>

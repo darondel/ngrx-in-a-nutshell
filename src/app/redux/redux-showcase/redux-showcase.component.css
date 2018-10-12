@@ -3,7 +3,7 @@ mat-toolbar {
   font-size: 18px;
 }
 
-img {
+::ng-deep img {
   max-width: 100%;
   max-height: 100%;
 }
