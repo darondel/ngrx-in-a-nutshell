@@ -5,6 +5,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 
 import { ReduxImplementationsComponent } from './redux-implementations/redux-implementations.component';
 import { ReduxPrinciplesComponent } from './redux-principles/redux-principles.component';
+import { ReduxSectionComponent } from './redux-section/redux-section.component';
 import { ReduxShowcaseComponent } from './redux-showcase/redux-showcase.component';
 
 @NgModule({
@@ -20,6 +21,7 @@ import { ReduxShowcaseComponent } from './redux-showcase/redux-showcase.componen
   declarations: [
     ReduxImplementationsComponent,
     ReduxPrinciplesComponent,
+    ReduxSectionComponent,
     ReduxShowcaseComponent
   ],
   exports: [

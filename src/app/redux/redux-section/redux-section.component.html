@@ -1,0 +1,8 @@
+<mat-expansion-panel [expanded]="isExpanded | async" (opened)="onOpen()">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      {{ section }}
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <ng-content></ng-content>
+</mat-expansion-panel>
