@@ -1,13 +1,16 @@
 import { ActionReducerMap, createFeatureSelector, createSelector } from '@ngrx/store';
+import { routerReducer, RouterReducerState } from '@ngrx/router-store';
 
 import { getSelectedSection, reduxReducer, ReduxState } from './redux/store/reducers/redux.reducer';
 
 export interface AppState {
   redux: ReduxState;
+  router: RouterReducerState;
 }
 
 export const reducers: ActionReducerMap<AppState> = {
-  redux: reduxReducer
+  redux: reduxReducer,
+  router: routerReducer
 };
 
 export const getReduxState = createFeatureSelector<AppState, ReduxState>('redux');
