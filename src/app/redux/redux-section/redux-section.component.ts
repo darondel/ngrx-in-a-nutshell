@@ -4,9 +4,9 @@ import { select, Store } from '@ngrx/store';
 
 import { Observable } from 'rxjs';
 
+import { SelectSection, UnselectSection } from '../store/actions/redux.actions';
 import { ReduxSection } from '../store/models/redux.model';
 import { AppState, isReduxSectionSelected } from '../../app.reducer';
-import { SelectSection } from '../store/actions/redux.actions';
 
 @Component({
   selector: 'app-redux-section',
@@ -30,6 +30,10 @@ export class ReduxSectionComponent implements OnInit {
 
   onOpen() {
     this.store.dispatch(new SelectSection(this.section));
+  }
+
+  onClose() {
+    this.store.dispatch(new UnselectSection(this.section));
   }
 
 }

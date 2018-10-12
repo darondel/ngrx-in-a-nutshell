@@ -1,4 +1,4 @@
-<mat-expansion-panel [expanded]="isExpanded | async" (opened)="onOpen()">
+<mat-expansion-panel [expanded]="isExpanded | async" (opened)="onOpen()" (closed)="onClose()">
   <mat-expansion-panel-header>
     <mat-panel-title>
       {{ section }}

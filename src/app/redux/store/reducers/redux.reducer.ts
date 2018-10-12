@@ -16,6 +16,15 @@ export function reduxReducer(state = initialState, action: ReduxAction): ReduxSt
         ...state,
         selectedSection: action.section
       };
+    case ReduxActionType.UNSELECT_SECTION:
+      if (state.selectedSection === action.section) {
+        return {
+          ...state,
+          selectedSection: null
+        };
+      } else {
+        return state;
+      }
     default:
       return state;
   }

@@ -3,7 +3,8 @@ import { Action } from '@ngrx/store';
 import { ReduxSection } from '../models/redux.model';
 
 export enum ReduxActionType {
-  SELECT_SECTION = '[Redux] Select Section'
+  SELECT_SECTION = '[Redux] Select Section',
+  UNSELECT_SECTION = '[Redux] Unselect Section'
 }
 
 export class SelectSection implements Action {
@@ -13,4 +14,11 @@ export class SelectSection implements Action {
   }
 }
 
-export type ReduxAction = SelectSection;
+export class UnselectSection implements Action {
+  readonly type = ReduxActionType.UNSELECT_SECTION;
+
+  constructor(public section: ReduxSection) {
+  }
+}
+
+export type ReduxAction = SelectSection | UnselectSection;
