@@ -2,11 +2,10 @@ import { Component, Input, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 
-import { Todo } from '../store/models/todo.model';
 import { ActivateOne, CompleteOne } from '../store/actions/todo.actions';
-import { AppState, getAllTodos } from '../../app.reducer';
+import { Todo } from '../store/models/todo.model';
+import { getActiveTodos, getCompletedTodos, TodoState } from '../store/reducers/todo.reducer';
 
 @Component({
   selector: 'app-todo-list',
@@ -19,13 +18,12 @@ export class TodoListComponent implements OnInit {
 
   todos: Observable<Todo[]>;
 
-  constructor(private store: Store<AppState>) {
+  constructor(private store: Store<TodoState>) {
   }
 
   ngOnInit() {
     this.todos = this.store.pipe(
-      select(getAllTodos),
-      map(todos => todos.filter(todo => todo.completed === this.completed))
+      select(this.completed ? getCompletedTodos : getActiveTodos)
     );
   }
 

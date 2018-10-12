@@ -4,7 +4,7 @@ import { select, Store } from '@ngrx/store';
 
 import { Observable } from 'rxjs';
 
-import { AppState, getTotalActiveTodos } from '../../app.reducer';
+import { getTotalActiveTodos, TodoState } from '../store/reducers/todo.reducer';
 
 @Component({
   selector: 'app-todo-counter',
@@ -15,7 +15,7 @@ export class TodoCounterComponent implements OnInit {
 
   counter: Observable<number>;
 
-  constructor(private store: Store<AppState>) {
+  constructor(private store: Store<TodoState>) {
   }
 
   ngOnInit() {

@@ -11,7 +11,6 @@ import { CoreModule } from './core/core.module';
 
 import { AppComponent } from './app.component';
 import { reducers } from './app.reducer';
-import { TodoEffects } from './todo/store/effects/todo.effects';
 import { environment } from '../environments/environment';
 
 @NgModule({
@@ -26,7 +25,7 @@ import { environment } from '../environments/environment';
       logOnly: environment.production
     }),
     StoreRouterConnectingModule.forRoot(),
-    EffectsModule.forRoot([TodoEffects]),
+    EffectsModule.forRoot([]),
     CoreModule
   ],
   bootstrap: [

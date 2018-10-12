@@ -1,3 +1,4 @@
+import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { createEntityAdapter, EntityState } from '@ngrx/entity';
 
 import { TodoAction, TodoActionType } from '../actions/todo.actions';
@@ -39,3 +40,18 @@ export function todoReducer(state = initialState, action: TodoAction): TodoState
       return state;
   }
 }
+
+export const getTodoState = createFeatureSelector<TodoState>('todo');
+
+export const {
+  selectIds: getTodoIds,
+  selectEntities: getTodoEntities,
+  selectAll: getAllTodos,
+  selectTotal: getTotalTodos
+} = todoAdapter.getSelectors(getTodoState);
+
+export const getCompletedTodos = createSelector(getAllTodos, todos => todos.filter(todo => todo.completed));
+export const getTotalCompletedTodos = createSelector(getCompletedTodos, todos => todos.length);
+
+export const getActiveTodos = createSelector(getAllTodos, todos => todos.filter(todo => !todo.completed));
+export const getTotalActiveTodos = createSelector(getActiveTodos, todos => todos.length);
