@@ -2,7 +2,15 @@ mat-sidenav-container {
   height: 100%;
 }
 
+mat-sidenav-content mat-toolbar {
+  display: flex;
+}
+
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
+}
+
+.flex-spacer {
+  flex-grow: 1;
 }
