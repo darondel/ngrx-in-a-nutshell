@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatCardModule, MatExpansionModule, MatGridListModule, MatStepperModule, MatToolbarModule } from '@angular/material';
+import { MatCardModule, MatExpansionModule, MatGridListModule, MatIconModule, MatStepperModule, MatToolbarModule } from '@angular/material';
 import { LayoutModule } from '@angular/cdk/layout';
 
 import { ReduxImplementationsComponent } from './redux-implementations/redux-implementations.component';
@@ -15,6 +15,7 @@ import { ReduxShowcaseComponent } from './redux-showcase/redux-showcase.componen
     MatCardModule,
     MatExpansionModule,
     MatGridListModule,
+    MatIconModule,
     MatStepperModule,
     MatToolbarModule
   ],
