@@ -3,12 +3,12 @@
 </mat-toolbar>
 
 <mat-accordion>
-  <app-redux-section [section]="ReduxSection.MOTIVATION">
-    <img src="https://cdn-images-1.medium.com/max/1600/1*87dJ5EB3ydD7_AbhKb4UOQ.png" alt="Motivation">
+  <app-redux-section [section]="ReduxSection.MOTIVATION" [ngStyle]="{textAlign: 'center'}">
+    <img class="mat-elevation-z6" src="assets/images/diagrams/redux-motivation.png" alt="Motivation">
   </app-redux-section>
 
-  <app-redux-section [section]="ReduxSection.ARCHITECTURE">
-    <img src="https://pbs.twimg.com/media/CsvqVeIXEAAeCSX.png" alt="Architecture">
+  <app-redux-section [section]="ReduxSection.ARCHITECTURE" [ngStyle]="{textAlign: 'center'}">
+    <img class="mat-elevation-z6" src="assets/images/diagrams/redux-architecture.png" alt="Architecture">
   </app-redux-section>
 
   <app-redux-section [section]="ReduxSection.PRINCIPLES">
