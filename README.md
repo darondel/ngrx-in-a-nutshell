@@ -1,27 +1,36 @@
-# NgrxInANutshell
+# NGRX IN A NUTSHELL
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4.
+Reusable [Angular](https://github.com/angular/angular) application to quickly introduce [Redux](https://github.com/reduxjs/redux) with two parts:
 
-## Development server
+- A presentation with all core concepts.
+- A demonstration through [NgRx](https://github.com/ngrx/platform), inspired by [Redux](https://github.com/reduxjs/redux).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Included
 
-## Code scaffolding
+- [@ngrx/store](https://github.com/ngrx/platform/blob/master/docs/store/README.md) - RxJS powered state management for [Angular](https://github.com/angular/angular) applications, inspired by [Redux](https://github.com/reduxjs/redux).
+- [@ngrx/effects](https://github.com/ngrx/platform/blob/master/docs/effects/README.md) - Side effect model for [@ngrx/store](https://github.com/ngrx/platform/blob/master/docs/store/README.md).
+- [@ngrx/router-store](https://github.com/ngrx/platform/blob/master/docs/router-store/README.md) - Bindings to connect the Angular Router to [@ngrx/store](https://github.com/ngrx/platform/blob/master/docs/store/README.md).
+- [@ngrx/entity](https://github.com/ngrx/platform/blob/master/docs/entity/README.md) - Entity State adapter for managing record collections.
+- [@ngrx/store-devtools](https://github.com/ngrx/platform/blob/master/docs/store-devtools/README.md) - Instrumentation for [@ngrx/store](https://github.com/ngrx/platform/blob/master/docs/store/README.md) enabling a [powerful time-travelling debugger](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd).
+- [@angular/material](https://github.com/angular/material2) - Material Design for [Angular](https://github.com/angular/angular) applications.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Quick start
 
-## Build
+```bash
+# Clone the repository
+git clone https://github.com/darondel/ngrx-in-a-nutshell.git
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# Go to the project directory
+cd ngrx-in-a-nutshell
 
-## Running unit tests
+# Install the dependencies
+npm install
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Start the server
+ng serve
+```
 
-## Running end-to-end tests
+Navigate to [http://localhost:4200/](http://localhost:4200/) in your browser.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+_NOTE:_ the above setup instructions assume you have added local npm bin folders to your path.
+If this is not the case you will need to install the [Angular CLI](https://github.com/angular/angular-cli) globally.
