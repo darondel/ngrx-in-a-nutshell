@@ -3,19 +3,19 @@
 </mat-toolbar>
 
 <mat-accordion>
-  <app-redux-section [section]="ReduxSection.MOTIVATION" [ngStyle]="{textAlign: 'center'}">
+  <app-redux-section section="Motivation" [ngStyle]="{textAlign: 'center'}">
     <img class="mat-elevation-z6" src="assets/images/diagrams/redux-motivation.png" alt="Motivation">
   </app-redux-section>
 
-  <app-redux-section [section]="ReduxSection.ARCHITECTURE" [ngStyle]="{textAlign: 'center'}">
+  <app-redux-section section="Architecture" [ngStyle]="{textAlign: 'center'}">
     <img class="mat-elevation-z6" src="assets/images/diagrams/redux-architecture.png" alt="Architecture">
   </app-redux-section>
 
-  <app-redux-section [section]="ReduxSection.PRINCIPLES">
+  <app-redux-section section="Principles">
     <app-redux-principles></app-redux-principles>
   </app-redux-section>
 
-  <app-redux-section [section]="ReduxSection.IMPLEMENTATIONS">
+  <app-redux-section section="Implementations">
     <app-redux-implementations></app-redux-implementations>
   </app-redux-section>
 </mat-accordion>

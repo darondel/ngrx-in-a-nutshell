@@ -1,12 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
-
-import { select, Store } from '@ngrx/store';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { Observable } from 'rxjs';
 
-import { SelectSection, UnselectSection } from '../store/actions/redux.actions';
-import { ReduxSection } from '../store/models/redux.model';
-import { AppState, isReduxSectionSelected } from '../../app.reducer';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-redux-section',
@@ -15,25 +12,28 @@ import { AppState, isReduxSectionSelected } from '../../app.reducer';
 })
 export class ReduxSectionComponent implements OnInit {
 
-  @Input() section: ReduxSection;
+  @Input() section: string;
 
   isExpanded: Observable<boolean>;
 
-  constructor(private store: Store<AppState>) {
+  constructor(private route: ActivatedRoute, private router: Router) {
+  }
+
+  private get sectionFragment(): string {
+    return this.section.toLowerCase();
   }
 
   ngOnInit() {
-    this.isExpanded = this.store.pipe(
-      select(isReduxSectionSelected, {section: this.section})
+    this.isExpanded = this.route.fragment.pipe(
+      map(fragment => fragment && fragment.toLowerCase() === this.sectionFragment)
     );
   }
 
-  onOpen() {
-    this.store.dispatch(new SelectSection(this.section));
-  }
-
-  onClose() {
-    this.store.dispatch(new UnselectSection(this.section));
+  onClick() {
+    this.router.navigate(['./'], {
+      ...(this.route.snapshot.fragment === this.sectionFragment ? {} : {fragment: this.sectionFragment}),
+      relativeTo: this.route
+    });
   }
 
 }
