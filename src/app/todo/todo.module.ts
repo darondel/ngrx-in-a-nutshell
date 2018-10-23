@@ -8,6 +8,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 
 import { TodoRoutingModule } from './todo-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 import { TodoEffects } from './store/effects/todo.effects';
 import { todoReducer } from './store/reducers/todo.reducer';
@@ -30,6 +31,7 @@ import { TodoDashboardComponent } from './todo-dashboard/todo-dashboard.componen
     MatListModule,
     MatSnackBarModule,
     ReactiveFormsModule,
+    SharedModule,
     StoreModule.forFeature('todo', todoReducer),
     TodoRoutingModule
   ],

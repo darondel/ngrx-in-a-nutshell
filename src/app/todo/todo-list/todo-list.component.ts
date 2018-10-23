@@ -10,7 +10,7 @@ import { getActiveTodos, getCompletedTodos, TodoState } from '../store/reducers/
 @Component({
   selector: 'app-todo-list',
   templateUrl: './todo-list.component.html',
-  styleUrls: ['./todo-list.component.css', '../../shared/scrollable-mat-card.css']
+  styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent implements OnInit {
 
