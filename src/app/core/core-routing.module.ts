@@ -7,7 +7,7 @@ import { ReduxShowcaseComponent } from '../redux/redux-showcase/redux-showcase.c
 
 const routes: Routes = [
   {path: 'presentation', component: ReduxShowcaseComponent},
-  {path: 'demonstration', loadChildren: '../todo/todo.module#TodoModule'},
+  {path: 'demonstration', loadChildren: () => import('../todo/todo.module').then(m => m.TodoModule)},
   {path: '', redirectTo: '/presentation', pathMatch: 'full'}
 ];
 
