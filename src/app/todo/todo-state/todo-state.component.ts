@@ -4,7 +4,7 @@ import { select, Store } from '@ngrx/store';
 
 import { Observable } from 'rxjs';
 
-import { getTodoState, TodoState } from '../store/reducers/todo.reducer';
+import { getTodoState, ITodoState } from '../store/reducers/todo.reducer';
 
 @Component({
   selector: 'app-todo-state',
@@ -12,9 +12,9 @@ import { getTodoState, TodoState } from '../store/reducers/todo.reducer';
   styleUrls: ['./todo-state.component.css']
 })
 export class TodoStateComponent implements OnInit {
-  state: Observable<TodoState>;
+  state: Observable<ITodoState>;
 
-  constructor(private store: Store<TodoState>) {}
+  constructor(private store: Store<ITodoState>) {}
 
   ngOnInit() {
     this.state = this.store.pipe(select(getTodoState));

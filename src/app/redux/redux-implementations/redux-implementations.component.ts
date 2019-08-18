@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
+import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -16,7 +16,11 @@ export class ReduxImplementationsComponent implements OnInit {
   private static readonly WIDTH_UNDER_675PX: string = '(max-width: 675px)';
   private static readonly WIDTH_UNDER_950PX: string = '(max-width: 950px)';
 
-  implementations: { name: string; description: string; link: string }[] = [
+  implementations: Array<{
+    name: string;
+    description: string;
+    link: string;
+  }> = [
     {
       name: 'Redux',
       description: 'Original Library',

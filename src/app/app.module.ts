@@ -1,19 +1,19 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
-import { MatIconModule } from '@angular/material/icon';
 
+import { EffectsModule } from '@ngrx/effects';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { StoreRouterConnectingModule } from '@ngrx/router-store';
-import { EffectsModule } from '@ngrx/effects';
 
 import { CoreModule } from './core/core.module';
 
+import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { reducers } from './app.reducer';
-import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent],

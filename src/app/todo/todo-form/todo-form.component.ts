@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Store } from '@ngrx/store';
 
 import { AddOne } from '../store/actions/todo.actions';
-import { TodoState } from '../store/reducers/todo.reducer';
+import { ITodoState } from '../store/reducers/todo.reducer';
 
 @Component({
   selector: 'app-todo-form',
@@ -16,7 +16,7 @@ export class TodoFormComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private store: Store<TodoState>
+    private store: Store<ITodoState>
   ) {}
 
   ngOnInit() {

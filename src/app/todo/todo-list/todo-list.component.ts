@@ -4,11 +4,11 @@ import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
 import { ActivateOne, CompleteOne } from '../store/actions/todo.actions';
-import { Todo } from '../store/models/todo.model';
+import { ITodo } from '../store/models/todo.model';
 import {
   getActiveTodos,
   getCompletedTodos,
-  TodoState
+  ITodoState
 } from '../store/reducers/todo.reducer';
 
 @Component({
@@ -19,9 +19,9 @@ import {
 export class TodoListComponent implements OnInit {
   @Input() completed: boolean;
 
-  todos: Observable<Todo[]>;
+  todos: Observable<ITodo[]>;
 
-  constructor(private store: Store<TodoState>) {}
+  constructor(private store: Store<ITodoState>) {}
 
   ngOnInit() {
     this.todos = this.store.pipe(

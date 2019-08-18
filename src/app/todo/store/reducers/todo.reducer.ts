@@ -1,14 +1,14 @@
-import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { createEntityAdapter, EntityState } from '@ngrx/entity';
+import { createFeatureSelector, createSelector } from '@ngrx/store';
 
 import { TodoAction, TodoActionType } from '../actions/todo.actions';
-import { Todo } from '../models/todo.model';
+import { ITodo } from '../models/todo.model';
 
-export const todoAdapter = createEntityAdapter<Todo>();
+export const todoAdapter = createEntityAdapter<ITodo>();
 
-export interface TodoState extends EntityState<Todo> {}
+export interface ITodoState extends EntityState<ITodo> {}
 
-export const initialState: TodoState = todoAdapter.getInitialState({
+export const initialState: ITodoState = todoAdapter.getInitialState({
   ids: [],
   entities: {}
 });
@@ -16,7 +16,7 @@ export const initialState: TodoState = todoAdapter.getInitialState({
 export function todoReducer(
   state = initialState,
   action: TodoAction
-): TodoState {
+): ITodoState {
   switch (action.type) {
     case TodoActionType.ADD_ONE:
       return todoAdapter.addOne(
@@ -56,7 +56,7 @@ export function todoReducer(
   }
 }
 
-export const getTodoState = createFeatureSelector<TodoState>('todo');
+export const getTodoState = createFeatureSelector<ITodoState>('todo');
 
 export const {
   selectIds: getTodoIds,
