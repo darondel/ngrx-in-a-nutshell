@@ -24,12 +24,7 @@ import { NavComponent } from './nav/nav.component';
     MatTooltipModule,
     MatSidenavModule
   ],
-  declarations: [
-    NavComponent
-  ],
-  exports: [
-    NavComponent
-  ]
+  declarations: [NavComponent],
+  exports: [NavComponent]
 })
-export class CoreModule {
-}
+export class CoreModule {}

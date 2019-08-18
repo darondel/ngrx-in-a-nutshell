@@ -5,27 +5,48 @@
     [fixedInViewport]="true"
     [attr.role]="(isHandset | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset | async) ? 'over' : 'side'"
-    [opened]="!(isHandset | async)">
+    [opened]="(isHandset | async) === false"
+  >
     <mat-toolbar color="accent" class="mat-elevation-z6">
       <mat-icon svgIcon="redux"></mat-icon>
     </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item matTooltip="What is Redux?" matTooltipPosition="right" routerLink="/presentation">
+      <a
+        mat-list-item
+        matTooltip="What is Redux?"
+        matTooltipPosition="right"
+        routerLink="/presentation"
+      >
         <mat-icon>present_to_all</mat-icon>
       </a>
-      <a mat-list-item matTooltip="NgRx showcase" matTooltipPosition="right" routerLink="/demonstration">
+      <a
+        mat-list-item
+        matTooltip="NgRx showcase"
+        matTooltipPosition="right"
+        routerLink="/demonstration"
+      >
         <mat-icon>live_tv</mat-icon>
       </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary" class="mat-elevation-z6">
-      <button type="button" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset | async">
+      <button
+        type="button"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset | async"
+      >
         <mat-icon>menu</mat-icon>
       </button>
       <span>How Redux Works</span>
       <div class="flex-spacer"></div>
-      <a mat-icon-button matTooltip="Check the GitHub repository!" matTooltipPosition="left" href="https://github.com/darondel/ngrx-in-a-nutshell">
+      <a
+        mat-icon-button
+        matTooltip="Check the GitHub repository!"
+        matTooltipPosition="left"
+        href="https://github.com/darondel/ngrx-in-a-nutshell"
+      >
         <mat-icon svgIcon="github"></mat-icon>
       </a>
     </mat-toolbar>

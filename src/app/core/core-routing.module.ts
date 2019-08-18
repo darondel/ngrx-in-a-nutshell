@@ -6,19 +6,16 @@ import { ReduxModule } from '../redux/redux.module';
 import { ReduxShowcaseComponent } from '../redux/redux-showcase/redux-showcase.component';
 
 const routes: Routes = [
-  {path: 'presentation', component: ReduxShowcaseComponent},
-  {path: 'demonstration', loadChildren: () => import('../todo/todo.module').then(m => m.TodoModule)},
-  {path: '', redirectTo: '/presentation', pathMatch: 'full'}
+  { path: 'presentation', component: ReduxShowcaseComponent },
+  {
+    path: 'demonstration',
+    loadChildren: () => import('../todo/todo.module').then(m => m.TodoModule)
+  },
+  { path: '', redirectTo: '/presentation', pathMatch: 'full' }
 ];
 
 @NgModule({
-  imports: [
-    ReduxModule,
-    RouterModule.forRoot(routes)
-  ],
-  exports: [
-    RouterModule
-  ]
+  imports: [ReduxModule, RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-export class CoreRoutingModule {
-}
+export class CoreRoutingModule {}

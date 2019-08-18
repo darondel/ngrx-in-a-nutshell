@@ -5,5 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './redux-principles.component.html',
   styleUrls: ['./redux-principles.component.css']
 })
-export class ReduxPrinciplesComponent {
-}
+export class ReduxPrinciplesComponent {}

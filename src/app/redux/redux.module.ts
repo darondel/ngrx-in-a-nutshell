@@ -30,9 +30,6 @@ import { ReduxShowcaseComponent } from './redux-showcase/redux-showcase.componen
     ReduxSectionComponent,
     ReduxShowcaseComponent
   ],
-  exports: [
-    ReduxShowcaseComponent
-  ]
+  exports: [ReduxShowcaseComponent]
 })
-export class ReduxModule {
-}
+export class ReduxModule {}

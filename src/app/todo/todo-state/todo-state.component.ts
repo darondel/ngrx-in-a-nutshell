@@ -12,16 +12,11 @@ import { getTodoState, TodoState } from '../store/reducers/todo.reducer';
   styleUrls: ['./todo-state.component.css']
 })
 export class TodoStateComponent implements OnInit {
-
   state: Observable<TodoState>;
 
-  constructor(private store: Store<TodoState>) {
-  }
+  constructor(private store: Store<TodoState>) {}
 
   ngOnInit() {
-    this.state = this.store.pipe(
-      select(getTodoState)
-    );
+    this.state = this.store.pipe(select(getTodoState));
   }
-
 }

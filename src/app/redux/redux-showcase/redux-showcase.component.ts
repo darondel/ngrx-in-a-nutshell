@@ -5,5 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './redux-showcase.component.html',
   styleUrls: ['./redux-showcase.component.css']
 })
-export class ReduxShowcaseComponent {
-}
+export class ReduxShowcaseComponent {}

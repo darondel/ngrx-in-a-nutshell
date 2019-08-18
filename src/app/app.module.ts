@@ -16,9 +16,7 @@ import { reducers } from './app.reducer';
 import { environment } from '../environments/environment';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -32,9 +30,6 @@ import { environment } from '../environments/environment';
     EffectsModule.forRoot([]),
     CoreModule
   ],
-  bootstrap: [
-    AppComponent
-  ]
+  bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule {}

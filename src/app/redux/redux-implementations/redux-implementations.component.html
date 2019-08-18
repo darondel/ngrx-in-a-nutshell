@@ -1,7 +1,8 @@
 <mat-grid-list [cols]="cols | async" rowHeight="300px" #grid>
   <mat-grid-tile
     *ngFor="let implementation of implementations"
-    [colspan]="implementation.name === 'Redux' && grid.cols === 2 ? 2 : 1">
+    [colspan]="implementation.name === 'Redux' && grid.cols === 2 ? 2 : 1"
+  >
     <mat-card>
       <mat-card-header>
         <mat-card-title>
@@ -15,7 +16,10 @@
           <mat-icon mat-card-avatar svgIcon="github-black"></mat-icon>
         </a>
       </mat-card-header>
-      <mat-icon mat-card-image [svgIcon]="implementation.name.toLowerCase()"></mat-icon>
+      <mat-icon
+        mat-card-image
+        [svgIcon]="implementation.name.toLowerCase()"
+      ></mat-icon>
     </mat-card>
   </mat-grid-tile>
 </mat-grid-list>

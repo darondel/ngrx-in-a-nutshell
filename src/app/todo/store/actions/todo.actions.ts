@@ -1,3 +1,4 @@
+/* tslint:disable:max-classes-per-file */
 import { Action } from '@ngrx/store';
 
 export enum TodoActionType {
@@ -9,22 +10,19 @@ export enum TodoActionType {
 export class AddOne implements Action {
   readonly type = TodoActionType.ADD_ONE;
 
-  constructor(public content: string) {
-  }
+  constructor(public content: string) {}
 }
 
 export class CompleteOne implements Action {
   readonly type = TodoActionType.COMPLETE_ONE;
 
-  constructor(public id: string) {
-  }
+  constructor(public id: string) {}
 }
 
 export class ActivateOne implements Action {
   readonly type = TodoActionType.ACTIVATE_ONE;
 
-  constructor(public id: string) {
-  }
+  constructor(public id: string) {}
 }
 
 export type TodoAction = AddOne | CompleteOne | ActivateOne;

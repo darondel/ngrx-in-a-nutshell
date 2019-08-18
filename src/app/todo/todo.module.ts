@@ -47,9 +47,6 @@ import { TodoDashboardComponent } from './todo-dashboard/todo-dashboard.componen
     TodoListComponent,
     TodoStateComponent
   ],
-  exports: [
-    TodoDashboardComponent
-  ]
+  exports: [TodoDashboardComponent]
 })
-export class TodoModule {
-}
+export class TodoModule {}

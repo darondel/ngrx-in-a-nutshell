@@ -5,7 +5,11 @@ import { Observable } from 'rxjs';
 
 import { ActivateOne, CompleteOne } from '../store/actions/todo.actions';
 import { Todo } from '../store/models/todo.model';
-import { getActiveTodos, getCompletedTodos, TodoState } from '../store/reducers/todo.reducer';
+import {
+  getActiveTodos,
+  getCompletedTodos,
+  TodoState
+} from '../store/reducers/todo.reducer';
 
 @Component({
   selector: 'app-todo-list',
@@ -13,13 +17,11 @@ import { getActiveTodos, getCompletedTodos, TodoState } from '../store/reducers/
   styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent implements OnInit {
-
   @Input() completed: boolean;
 
   todos: Observable<Todo[]>;
 
-  constructor(private store: Store<TodoState>) {
-  }
+  constructor(private store: Store<TodoState>) {}
 
   ngOnInit() {
     this.todos = this.store.pipe(
@@ -28,7 +30,8 @@ export class TodoListComponent implements OnInit {
   }
 
   onSelect(id: string) {
-    this.store.dispatch(this.completed ? new ActivateOne(id) : new CompleteOne(id));
+    this.store.dispatch(
+      this.completed ? new ActivateOne(id) : new CompleteOne(id)
+    );
   }
-
 }

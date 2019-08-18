@@ -10,16 +10,13 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./nav.component.css', '../../shared/flex-spacer.css']
 })
 export class NavComponent implements OnInit {
-
   isHandset: Observable<boolean>;
 
-  constructor(private breakpointObserver: BreakpointObserver) {
-  }
+  constructor(private breakpointObserver: BreakpointObserver) {}
 
   ngOnInit() {
-    this.isHandset = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
-      map(state => state.matches)
-    );
+    this.isHandset = this.breakpointObserver
+      .observe(Breakpoints.Handset)
+      .pipe(map(state => state.matches));
   }
-
 }

@@ -12,16 +12,11 @@ import { getTotalActiveTodos, TodoState } from '../store/reducers/todo.reducer';
   styleUrls: ['./todo-counter.component.css']
 })
 export class TodoCounterComponent implements OnInit {
-
   counter: Observable<number>;
 
-  constructor(private store: Store<TodoState>) {
-  }
+  constructor(private store: Store<TodoState>) {}
 
   ngOnInit() {
-    this.counter = this.store.pipe(
-      select(getTotalActiveTodos)
-    );
+    this.counter = this.store.pipe(select(getTotalActiveTodos));
   }
-
 }

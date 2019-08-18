@@ -2,7 +2,12 @@
   <mat-card-content>
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
       <mat-form-field>
-        <input type="text" placeholder="What do you plan to do?" formControlName="content" matInput>
+        <input
+          type="text"
+          placeholder="What do you plan to do?"
+          formControlName="content"
+          matInput
+        />
       </mat-form-field>
     </form>
   </mat-card-content>

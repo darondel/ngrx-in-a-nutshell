@@ -12,11 +12,12 @@ import { TodoState } from '../store/reducers/todo.reducer';
   styleUrls: ['./todo-form.component.css']
 })
 export class TodoFormComponent implements OnInit {
-
   form: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private store: Store<TodoState>) {
-  }
+  constructor(
+    private formBuilder: FormBuilder,
+    private store: Store<TodoState>
+  ) {}
 
   ngOnInit() {
     this.form = this.formBuilder.group({
@@ -32,5 +33,4 @@ export class TodoFormComponent implements OnInit {
       this.form.reset();
     }
   }
-
 }
